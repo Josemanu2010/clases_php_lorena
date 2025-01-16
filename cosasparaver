@@ -1,0 +1,37 @@
+<!-- PARADIGMAS DE PROGRAMACION EN POO -->
+
+<!-- - POO: Nos permite trabajar con entidades y objetos -->
+
+    Propiedades: atributos del objeto
+    Métodos: comportamientos o acciones que realiza el objeto.
+
+<!-- - Modificadores de acceso (public, private, protectec) -->
+
+    Public: es accedida desde cualquier parte
+    Private: puede ser accedida solamente desde la misma clase
+    Protected, puede ser accedida en la misma clase o desde clases hijas
+
+- Crear una clase persona con dos propiedades, nombre y edad
+  Crear su método constructor para setear las propiedades que le pasamos al crear el objeto
+  Crear un método que salude a la persona mostrando sus propiedades
+
+<!-- - Abstracción: Creamos nuestras propias versiones de métodos del padre -->
+
+    Clase padre: abstract class nombre
+    Propiedad: protected $variable
+    Function: abstract function moverse(); // este no debe tener nada de llaves
+    Hija extends padre: public function moverse() {return} // Aquí sobre escribo el método original
+
+<!-- - Encapsulamiento - (Getter $ Setter) - Modificadores de acceso (public, private, protected)  -->
+
+    Clase padre: class nombre
+    Propiedades: private $saldo
+    Function: public function depositar($monto){} - public function verSaldo() {return $this->saldo}
+    Hija: No extiende, solo hace instancia de sus métodos
+
+<!-- - Herencia (Extends), puedo hacer uso de los métodos del padre o sobre escribir los mismos métodos -->
+
+    Clase padre: class nombre
+    Propiedades: protected, public
+    Function: public function hacerSonido(){return}
+    Hija: Extends Padre, public function hacerSonido(){return}
