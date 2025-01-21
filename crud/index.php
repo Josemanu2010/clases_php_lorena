@@ -4,9 +4,24 @@ $db = new Db;
 $conn = $db?->conectDB();
 $query = 'SELECT * FROM persona';
 $personas = $conn->query($query);
+
+
+
 // $personas->fetch_all();
 // var_dump($personas);
 
+session_start();
+var_dump($_SESSION);
+
+if ($_GET['cerrar_sesion'] === 'si') {
+   echo 'Entró a la ejecución';
+   session_start();
+   session_unset();
+   session_destroy();
+   header('Location: practica_sesiones.php');
+} else {
+   echo 'No entró al cerrar sesión';
+}
 
 ?>
 <!DOCTYPE html>
@@ -21,6 +36,12 @@ $personas = $conn->query($query);
 
 <body>
    <main>
+
+      <section>
+         <h2>SE CREÓ EL PRODUCTO: <?= $_SESSION['name'] . ' CON PRECIO: ' . $_SESSION['precio']; ?></h2>
+         <a href="?cerrar_sesion=si">Cerrar sesión</a>
+      </section>
+
       <div class="container pt-5">
          <h1 class="text-center">SISTEMA DE GESTION DE PERSONAS</h1>
       </div>

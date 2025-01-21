@@ -1,5 +1,24 @@
 <!-- Registrar por medio de un input un producto completo (nombre, sotck, precio, tiene_envios) -->
 
+<?php
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
+    echo 'Entrando por post <br>';
+    $name = $_POST['name'];
+    $stock = $_POST['stock'];
+    $precio = $_POST['precio'];
+    $envios = $_POST['envios'];
+    var_dump($_POST);
+
+    if ($envios === 'SI') {
+        session_start();
+        $_SESSION['name'] = $name;
+        $_SESSION['precio'] = $precio;
+        header('Location: index.php');
+    }
+}
+?>
+
 
 <html lang="en">
 
@@ -43,7 +62,7 @@
                 </label>
             </div>
             <div class="form-group">
-                <input type="submit" class="btn btn-success" value="Registrar producto">
+                <input type="submit" class="btn btn-success" value="Registrar producto" name="submit">
             </div>
         </form>
     </div>
