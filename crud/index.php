@@ -6,6 +6,8 @@ $query = 'SELECT * FROM persona';
 $personas = $conn->query($query);
 // $personas->fetch_all();
 // var_dump($personas);
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
