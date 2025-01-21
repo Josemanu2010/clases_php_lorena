@@ -19,12 +19,12 @@ $personas = $conn->query($query);
 
 <body>
    <main>
-      <div class="conatiner">
-         <h1>SISTEMA DE GESTION DE PERSONAS</h1>
+      <div class="container pt-5">
+         <h1 class="text-center">SISTEMA DE GESTION DE PERSONAS</h1>
       </div>
-      <section class="flex">
-         <div class="">
-            <span>CRUD DE PERSONAS</span>
+      <section class="row">
+         <div class="col-sm-8 border-1 mt-5">
+            <!-- <span>CRUD DE PERSONAS</span> -->
             <table class="table">
                <thead>
                   <tr>
@@ -32,9 +32,9 @@ $personas = $conn->query($query);
                      <th>Nombres</th>
                      <th>Correo</th>
                      <th>Teléfono</th>
-                     <th>Consulatr</th>
-                     <th>Editar</th>
-                     <th>Eliminar</th>
+                     <th></th>
+                     <th></th>
+                     <th></th>
                   </tr>
                </thead>
                <tbody>
@@ -45,17 +45,17 @@ $personas = $conn->query($query);
                      echo '<td>' . $p->nombres . '</td>';
                      echo '<td>' . $p->correo . '</td>';
                      echo '<td>' . $p->telefono . '</td>';
-                     echo '<td></td>';
-                     echo '<td></td>';
-                     echo '<td></td>';
+                     echo '<td><a href="#" class="btn btn-primary">Consultar</td>';
+                     echo '<td><a href="#" class="btn btn-success">Editar</td>';
+                     echo '<td><a href="#" class="btn btn-danger">Eliminar</td>';
                      echo '</tr>';
                   }
                   ?>
                </tbody>
             </table>
          </div>
-         <div class="">
-            <span>INFORMACIÓN DE PRODUCTOS</span>
+         <div class="col-sm-4">
+            <!-- <span>INFORMACIÓN DE PRODUCTOS</span> -->
          </div>
       </section>
    </main>
