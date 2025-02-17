@@ -1,7 +1,5 @@
 <?php
 
-    require_once 'config.php';
-
     class db {
 
         private $host;
@@ -23,6 +21,11 @@
                 die('Error en la conexión a la base de datos');
             }
             return $this->conn;
+        }
+
+        public static function connect() {
+            $db = new self();
+            return $db->connectDB();
         }
 
     }

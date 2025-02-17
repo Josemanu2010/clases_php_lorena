@@ -1,5 +1,6 @@
 
 <?php
+    require_once '../app/config.php';
     require_once '../app/db.php';
     $db = new db;
     $conn = $db->connectDB();
@@ -18,12 +19,12 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container mt-5">
         <ul>
-            <li>MODULARIDAD</li>
-            <li>RUTAS AMIGABLES</li>
-            <li></li>
-            <li></li>
+            <li>Modularidad</li>
+            <li>RUTAS Relativas y absolutas</li>
+            <li>Métodos mágicos</li>
+            <li>Métodos estátitos y resolución de ámbito</li>
             <li></li>
             <li></li>
             <li></li>

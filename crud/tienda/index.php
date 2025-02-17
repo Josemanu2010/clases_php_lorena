@@ -2,12 +2,13 @@
 
   
 
+    require_once 'app/config.php';
     require_once 'app/db.php';
     $db = new db;
     $conn = $db->connectDB();
     $query = 'SELECT * FROM persona';
     $res = $conn->query($query);
-    echo URL;
+    // echo URL;
 ?>
 
     <?php require_once 'pages/templates/header.php'; ?>
