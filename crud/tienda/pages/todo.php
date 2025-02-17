@@ -21,6 +21,8 @@
 
     <div class="container mt-5">
         <ul>
+            <li>Crear archivo dentro de <kbd>pages/login.php</kbd> & <kbd>pages/registro.php</kbd></li>
+            <li>Crear lógica de registro / conectar la DB, y mandar la info a la DB</li>
             <li>Formulario de registro de usuario: <kbd>username</kbd> <kbd>pass</kbd> <kbd>Roll</kbd> <kbd>Botón registrar</kbd></li>
             <li>Crear formulario Login: <kbd>username</kbd> <kbd>pass</kbd> <kbd>Botón iniciar sesión</kbd></li>
             <li>Crear estrcutura de sesiones para el usuario</li>
